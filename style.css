@@ -157,10 +157,17 @@ body {
     padding: 20px;
 }
 
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
 .movie-list {
     display: flex;
     align-items: center;
     height: 300px;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
 }
 
 .movie-list-item {
@@ -187,6 +194,7 @@ body {
     object-fit: cover;
     margin: 10px;
     transition: all 0.5s ease-in-out;
+    border-radius: 20px;
 }
 
 .movie-list-item-title {
@@ -227,4 +235,46 @@ body {
     left: 30px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+}
+
+.movie-list-arrow {
+    position: absolute;
+    font-size: 120px;
+    top: 90px;
+    right: 0;
+    opacity: 0.5;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.container.active {
+    background-color: white;
+}
+
+.movie-list-title.active {
+    color:black;
+}
+
+.navbar-container.active {
+    background-color: white;
+    color:black;
+}
+
+.sidebar.active {
+    background-color: white;
+    color:black;
+}
+
+.left-menu-icon.active {
+    background-color: white;
+    color:black;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
 }
